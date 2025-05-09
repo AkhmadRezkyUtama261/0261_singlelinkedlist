@@ -160,7 +160,11 @@ int main()
                     cout << "\nList Kosong\n";
                     break;
                 }
-                
+                Node *previous, *current;
+                cout << endl
+                << "Masukkan no mahasiswa yang dicari : ";
+                cin >> nim;
+
             }
         }
 
