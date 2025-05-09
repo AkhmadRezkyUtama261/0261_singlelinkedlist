@@ -104,3 +104,51 @@ void traverse()
     }
   }
 };
+
+int main()
+{
+    LinkedList mhs;
+    int nim;
+    char ch;
+
+    do
+    {
+        cout << "Menu" << endl;
+        cout << "1. Menambah data kedalam list" << endl;
+        cout << "2. Menghapus data dari dalam list" << endl;
+        cout << "3. Menampilkan semua data didalam list" << endl;
+        cout << "4. Mencari data dalam list" << endl;
+        cout << "5. Keluar" << endl;
+        cout << endl
+        << "Masukkan pilihan (1-5): ";
+        cin >> ch;
+        switch (ch)
+        {
+            case '1':
+            {
+                mhs.addNode();
+                break;
+            }
+            case '2':
+            {
+                if (mhs.listEmpty())
+                {
+                    cout << endl
+                    << "List Kosong" << endl;
+                    break;
+                }
+                cout << endl
+                <<"\nMasukkan no Mahasiswa yang akan dihapus : ";
+                cin >> nim;
+                if (mhs.delNode(nim) == false)
+                cout << endl
+                << "Data tidak ditemukan" << endl;
+                else
+                cout << endl
+                << "Data dengan Nomor mahasiswa " << nim << " berhasil dihapus " << endl;
+            }
+            break;
+        }
+
+    }
+}
