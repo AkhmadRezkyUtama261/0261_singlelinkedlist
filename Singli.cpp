@@ -8,3 +8,25 @@ class Node
     int noMhs;
     Node *next;
 };
+
+class SingleLinkedList
+{
+    Node *START;
+
+    public:
+    SingleLinkedList ()
+    {
+        START = NULL;
+    }
+
+    void addnode()
+    {
+int nim;
+cout << "\nMasukkan Nomor Mahasiswa: ";
+cin >> nim;
+
+Node *nodeBaru = new Node;
+nodeBaru->noMhs = nim;
+
+    }
+};
